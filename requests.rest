@@ -1,0 +1,40 @@
+POST http://localhost:2000/login
+Content-Type: application/json
+
+{
+    "username": "test",
+    "password": "1234"
+}
+
+###
+
+GET http://localhost:2000/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MzQ2ODc1NjgsImV4cCI6MTczNDY4NzU4M30.sJmtw6iSpWP7GkH3oEYDkifKAF-l3r13lQ0qggyrbS0
+#   "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoidGVzdCIsImlhdCI6MTczNDYwNDQxMCwiZXhwIjoxNzM0NjA0NDQwfQ.bU3kUuXzHf352BWC6k4-VWO1WpGeN8KY6sqbDK_qnGY",
+#   "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoidGVzdCIsImlhdCI6MTczNDYwNDQxMH0.qY6Kvrg_Bjd-n99I4gD6EwHF_k19O9oPqPMjVDnvc2g"
+# }
+
+###
+POST http://localhost:2000/token
+Content-Type: application/json
+
+{
+    "token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoidGVzdCIsImlhdCI6MTczNDY4Nzk4MH0.9v8CT3QWrZX0aHLr1vPf17qWnKlsZW_v3eOhU4L7Tls"
+}
+###
+
+DELETE  http://localhost:2000/logout
+Content-Type: application/json
+
+{
+    "token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoidGVzdCIsImlhdCI6MTczNDg3Mjc4N30.pULc82bW2Xsce7mSOa0u0DNEX1PeHg8-OvpjSZie3NU"
+
+}
+###
+
+POST http://localhost:2000/cpf
+Content-Type: application/json
+
+{
+    "cpf":"696.569.107-70"
+}
